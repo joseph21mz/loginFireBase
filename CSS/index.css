@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+    background-color: blue;
+    color: aqua;
+}
+input{
+    align-items: center;
+}
+
+.hidden{
+    display: none;
+}

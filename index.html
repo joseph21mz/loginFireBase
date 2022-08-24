@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/index.css" rel="stylesheet" type="text/css">
+    <title>Mi Login</title>
+</head>
+<body>
+    <h1>Hola bienvenidos a mi Primer Login</h1>
+    <div id="app">
+        <button id="btn-login">Entrar</button>
+        <button id="btn-logout" class="hidden">Salir</button>
+
+        <form id="todoform">
+            <div id="user-info"></div>
+            <input 
+                type="text"
+                id="todo-input"
+                placeholder="Tarea Nueva..."
+                autocomplete="off"
+            />
+        </form>
+        <div id="todos-container"></div>
+    </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-analytics.js";
+        
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyCg0xiWaONiUR410xa_1R7b4-ZOnRi5IFk",
+          authDomain: "mi-login-ddb19.firebaseapp.com",
+          projectId: "mi-login-ddb19",
+          storageBucket: "mi-login-ddb19.appspot.com",
+          messagingSenderId: "866675434947",
+          appId: "1:866675434947:web:6c6c4f7a32cf7d9c260976",
+          measurementId: "G-GHZ17DQ9E0"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+<script src="JS/app.js" type="module"></script>
+</body>
+</html>

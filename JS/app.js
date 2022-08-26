@@ -1,7 +1,9 @@
 import {logIn,logOut}  from "./auth.js";
-import { getAuth, onAuthStateChanged, GoogleAuthProvider} from "https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js";
+import { getAuth, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js";
 const buttonLogin = document.querySelector("#btn-login");
 const buttonLoguot = document.querySelector("#btn-logout");
+const todoform = document.querySelector("#todoform");
+const userinfo = document.querySelector("#user-info");
 
 let currentUser;
 const auth = getAuth();
@@ -30,5 +32,16 @@ buttonLoguot.addEventListener("click", e =>{
 });
 
 function init(){
+    buttonLogin.classList.add("hidden");
+    buttonLoguot.classList.remove("hidden");
+    todoform.classList.remove("hidden");
+
+    const Usuario = "<img src='''${currentUser.photoURL}''' width='30' /> <span>${currentUser.displayName}</span>";
+    userinfo.innerHTML= Usuario;
+
 
 }
+
+
+
+   

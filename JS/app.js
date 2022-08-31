@@ -3,7 +3,7 @@ import { getAuth, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9
 const buttonLogin = document.querySelector("#btn-login");
 const buttonLoguot = document.querySelector("#btn-logout");
 const todoform = document.querySelector("#todoform");
-const userinfo = document.querySelector("#user-info");
+const userInfo = document.querySelector("#user-info");
 
 let currentUser;
 const auth = getAuth();
@@ -34,14 +34,10 @@ buttonLoguot.addEventListener("click", e =>{
 function init(){
     buttonLogin.classList.add("hidden");
     buttonLoguot.classList.remove("hidden");
-    todoform.classList.remove("hidden");
+    todoform.classList.remove("hidden");                                             
+    userInfo.innerHTML=`<img src="${currentUser.photoURL}" width"152"/><span>${currentUser.displayName}</span>`; 
 
-    const Usuario = "<img src='''${currentUser.photoURL}''' width='30' /> <span>${currentUser.displayName}</span>";
-    userinfo.innerHTML= Usuario;
-
-
+    
 }
 
 
-
-   

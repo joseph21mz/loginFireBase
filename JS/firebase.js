@@ -1,6 +1,9 @@
+import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-const db = getFirestore();
+const app = initializeApp(firebaseConfig);
+
+const db = getFirestore(app);
 
 export async function insert(item){
   try{
@@ -11,6 +14,7 @@ export async function insert(item){
   }
 }
 
+/*
 export async function getItems(uid){
   try{
     let items =[];
@@ -19,4 +23,4 @@ export async function getItems(uid){
 
   }
 
-}
+}*/

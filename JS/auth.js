@@ -17,7 +17,6 @@ auth.languageCode ="es";
     }
  }
   
-
  export function logOut(){
     auth.signOut();
  };
